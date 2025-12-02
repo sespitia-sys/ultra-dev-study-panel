@@ -27,24 +27,26 @@ function App() {
   return (
     <div className="app-root">
       <header className="site-header">
-        <div className="site-header-content">
-          <h1>Ultra Dev Study Panel</h1>
-          <p>
-            Panel de estudio de Desarrollo Web I para entrenar como ingeniero/a
-            de élite.
-          </p>
-          <p className="site-header-sub">
-            Bienvenido, <strong>{estudiante}</strong>.
-          </p>
-        </div>
+  <div className="site-header-inner">
+    <div className="site-header-content">
+      <h1>Ultra Dev Study Panel</h1>
+      <p>
+        Panel de estudio de Desarrollo Web I para entrenar como ingeniero/a de élite.
+      </p>
+      <p className="site-header-sub">
+        Bienvenido, <strong>{estudiante}</strong>.
+      </p>
+    </div>
 
-        <nav className="site-nav" aria-label="Secciones principales">
-          <a href="#objetivos">Objetivos</a>
-          <a href="#progreso">Progreso</a>
-          <a href="#temas">Temas</a>
-          <a href="#cursos-api">Cursos (API)</a>
-        </nav>
-      </header>
+    <nav className="site-nav" aria-label="Navegación del panel de estudio">
+      <a href="#objetivos">Objetivos</a>
+      <a href="#progreso">Progreso</a>
+      <a href="#temas">Temas</a>
+      <a href="#cursos-api">Cursos (API)</a>
+    </nav>
+  </div>
+</header>
+
 
       <main className="app-main">
         
@@ -198,8 +200,10 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <p>© 2025 Ultra Dev · Panel de estudio de {estudiante}</p>
-      </footer>
+  <div className="site-footer-inner">
+    <p>© 2025 Ultra Dev · Panel de estudio de {estudiante}</p>
+  </div>
+</footer>
     </div>
   );
 }
