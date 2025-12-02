@@ -1,0 +1,330 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  color: #e5e7eb;
+  background-color: #020617;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  border-bottom: 1px solid #1f2937;
+  background: #020617;
+  padding: 16px 24px;
+}
+
+.site-header-content {
+  max-width: 960px;
+  margin: 0 auto 8px auto;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.site-header p {
+  margin: 0;
+}
+
+.site-header-sub {
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+.site-nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #93c5fd;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.app-main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+/* Resumen con CSS Grid */
+#resumen {
+  margin-bottom: 24px;
+}
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.resumen-card {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+.resumen-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color: #9ca3af;
+}
+
+.resumen-card p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Cards de objetivos */
+.card-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+/* Progreso */
+.progreso-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+/* Botones generales */
+section button {
+  padding: 8px 14px;
+  border-radius: 9999px;
+  border: 1px solid #38bdf8;
+  background: #0f172a;
+  color: #e0f2fe;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+section button:hover {
+  opacity: 0.9;
+}
+
+/* Formulario de temas */
+.temas-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.temas-form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.temas-form button {
+  border-color: #22c55e;
+  background: #022c22;
+  color: #bbf7d0;
+}
+
+.temas-form button:hover {
+  opacity: 0.9;
+}
+
+/* Lista de temas */
+.temas-lista {
+  list-style: disc;
+  padding-left: 20px;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.tema-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.tema-item span {
+  flex: 1;
+}
+
+.tema-borrar {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid #f97373;
+  background: #450a0a;
+  color: #fee2e2;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.tema-borrar:hover {
+  opacity: 0.9;
+}
+
+/* Cursos API */
+.api-courses-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.api-course-card {
+  background: #020617;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  padding: 12px 16px;
+}
+
+.api-course-card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.api-course-card p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #1f2937;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Accesibilidad: texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.tabla-descripcion {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.tabla-wrapper {
+  margin-top: 8px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+thead {
+  background: #020617;
+}
+
+th,
+td {
+  border: 1px solid #1f2937;
+  padding: 8px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: #020617;
+}
+
+tbody tr:nth-child(odd) {
+  background: #030712;
+}
+
+/* Responsive básico */
+@media (max-width: 600px) {
+  .app-main {
+    padding: 16px;
+  }
+
+  .site-header {
+    padding: 12px 16px;
+  }
+
+  .site-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-nav {
+    gap: 8px;
+  }
+
+  .resumen-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  .resumen-grid {
+    grid-template-columns: 1fr;
+  }
+}
